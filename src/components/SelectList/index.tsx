@@ -17,13 +17,14 @@ export function SelectList(props: Props) {
   return (
     <View style={styles.container}>
       <Input        
+        testID='search-input'
         placeholder={props.placeholder}
         onChangeText={props.onChange}
         isLoading={props.isLoading}
         value={props.value}
       />
 
-      <View style={styles.options}>
+      <View style={styles.options} testID="select-list-options">
         {
           props.data.map((item) => (
             <TouchableOpacity

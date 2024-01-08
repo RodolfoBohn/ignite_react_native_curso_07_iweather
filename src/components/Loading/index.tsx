@@ -5,7 +5,10 @@ import { theme } from '@styles/theme';
 
 export function Loading() {
   return (
-    <View style={styles.container}>
+    <View 
+      style={styles.container}
+      testID='loading'
+    >
       <ActivityIndicator color={theme.colors.blue_light} />
     </View>
   );
