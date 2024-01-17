@@ -25,12 +25,12 @@ jobs:
       - name: Run Tests
         run: npm test
 
-  CD:
-    name: Contiuous Delivery
-    runs-on: ubuntu-latest
+  # CD:
+  #   name: Contiuous Delivery
+  #   runs-on: ubuntu-latest
 
-    needs: CI
+  #   needs: CI
 
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+  #   steps:
+  #     - name: Checkout repository
+  #       uses: actions/checkout@v3
