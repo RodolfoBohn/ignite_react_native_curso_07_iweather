@@ -12,8 +12,6 @@ jobs:
     name: Contiuous Delivery
     runs-on: ubuntu-latest
 
-    if: ${{ github.event.workflow_run.run.conclusion == 'success' }}
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
