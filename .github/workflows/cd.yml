@@ -1,17 +1,14 @@
 name: CD
 
 on:
-  worflow_run:
-    workflows: [CI]
-    types:
-      - completed
+  push:
+    branches:
+      - main
 
 jobs:
   CD:
     name: Contiuous Delivery
     runs-on: ubuntu-latest
-
-    if ${{ github.event.workflow_run.run.conclusion == 'success' }}
 
     steps:
       - name: Checkout repository
