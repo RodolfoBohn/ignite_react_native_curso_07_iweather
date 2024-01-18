@@ -4,10 +4,26 @@
   },
   "build": {
     "preview": {
+      "autoIncrement": true,
       "android": {
-        "buildType": "apk"
+        "buildType": "apk", 
+        "autoIncrement": "versionCode"
       }
     },
-    "production": {}
+    "production": {
+      "autoIncrement": true, 
+      "android": {
+        "autoIncrement": "versionCode"
+      }
+    }
   }
+  // "submit": {
+  //   "preview": {
+  //     "android": {
+  //       "track": "internal",
+  //       "serviceAccountKeyPath": ";/google-services.json",
+  //       "releaseStatus": "draft"
+  //     }
+  //   }
+  // }
 }

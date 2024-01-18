@@ -45,5 +45,15 @@ jobs:
           packager: npm
           token: ${{ secrets.EAS_EXPO_CICD_TOKEN }}
 
+      # -name: Get config file
+      #   env:
+      #     GOOGLE_SERVICES_64: ${{ secrets.EAS_GOOGLE_PLAY_API }}
+      #   run: |
+      #     echo $GOOGLE_SERVICES_64 > google-services.json.b64
+      #     base694 -d -i google-services.json.b64 > google-services.json
+
       - name: Build
         run: eas build --platform android --profile preview --non-interactive --no-wait
+
+      # - name: Build and submit
+      #   run: eas build --platform android --profile production --non-interactive --auto-submit-with-profile=production --no-wait
